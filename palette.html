@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palette benchmark — SeoulClinicIndex design mockup v2</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('sci.palette')||'teal';if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<style>
+  .pb{background:var(--canvas);min-height:100vh}
+  .pb .wrap{padding-top:40px;padding-bottom:80px}
+  .pb h1{font-size:32px;margin-bottom:10px}
+  .pb .lead{max-width:76ch;margin-bottom:8px}
+  .note{font-size:13.5px;color:var(--muted);margin-bottom:34px;max-width:82ch}
+  h2.sec{font-size:20px;margin:44px 0 6px;letter-spacing:-.02em}
+  p.sub{color:var(--muted);font-size:14px;margin:0 0 20px;max-width:80ch}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface);
+        border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);
+     padding:12px 14px;border-bottom:1px solid var(--line);font-weight:650;background:var(--field-bg)}
+  td{padding:12px 14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  .sw{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+  .sw i{width:14px;height:14px;border-radius:4px;display:block;flex:none;border:1px solid rgba(0,0,0,.08)}
+  .sw code{font-size:12px;color:var(--ink-2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .site{font-weight:600}
+  .site small{display:block;color:var(--muted);font-weight:400;font-size:11.5px;margin-top:2px}
+  td.pmeta{font-size:11.5px;color:var(--muted);white-space:nowrap}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .pcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+         box-shadow:var(--sh-1);display:flex;flex-direction:column}
+  .pcard .strip{height:8px;display:flex}
+  .pcard .strip i{flex:1;display:block}
+  .pcard .body{padding:18px}
+  .pcard h4{font-size:16px;margin-bottom:3px;letter-spacing:-.015em}
+  .pcard .kk{font-size:12px;color:var(--muted);margin-bottom:12px}
+  .pcard p{font-size:13px;color:var(--ink-2);line-height:1.6;margin-bottom:14px}
+  .pcard .row2{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .pcard .row2 span{font-size:11px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);
+                     border:1px solid var(--line-2);border-radius:5px;padding:2px 6px}
+  .pcard .go{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+  .pcard .go a{font-size:12.5px;font-weight:600;color:var(--brand);text-decoration:none;
+                border:1px solid var(--line);border-radius:8px;padding:6px 11px}
+  .pcard .go a:hover{border-color:var(--brand);background:var(--brand-050)}
+  .preview{height:150px;overflow:hidden;border-bottom:1px solid var(--line);position:relative}
+  .preview img{width:100%;display:block}
+  .verdict{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);
+           border-radius:var(--r);padding:18px 22px;margin-bottom:24px}
+  .verdict h3{font-size:15px;margin-bottom:8px}
+  .verdict p{font-size:13.5px;color:var(--ink-2);line-height:1.7}
+  .verdict p + p{margin-top:9px}
+  .verdict b{color:var(--ink)}
+  .bars{display:flex;gap:2px;height:26px;border-radius:7px;overflow:hidden;margin-bottom:14px;border:1px solid var(--line)}
+  .bars i{flex:1}
+</style>
+</head>
+<body class="pb">
+
+<div class="mock-banner">
+  <span class="pill">DESIGN MOCKUP v2</span>
+  <span>Palette review · benchmarked against comparable clinic and medical-tourism sites</span>
+</div>
+<div class="mock-nav">
+  <a href="index.html">Live mockup</a>
+  <a href="palette.html" class="on">Palette benchmark</a>
+  <a href="screenshots/">Screenshots</a>
+</div>
+
+<div class="wrap">
+
+  <h1>Palette benchmark and candidates</h1>
+  <p class="lead">Six palettes built on the same structure, so the screens can be compared one for one. Every candidate keeps the warm paper ground and the single-action-colour rule — only the brand hue and the accent move.</p>
+  <p class="note">The live mockup carries a palette switcher in its top bar. Open any screen and flip the six options there; the choice is stored in the browser and can be shared as a URL (<code>?theme=navy</code>).</p>
+
+  <div class="verdict">
+    <h3>What the benchmark says</h3>
+    <p><b>Green and teal are not the category default.</b> Of the nine sites sampled below, only two lead with a teal-family brand colour — <b>treatment.com</b> (<code>#03A989</code>) and <b>plasticsurgery.org</b> (<code>#018BAF</code>). Both are high-volume, utility-first properties: a treatment marketplace and a professional body. They read as "generic healthcare provider", the colour of hospital portals and pharmacy chains.</p>
+    <p>The dominant pattern in this category is a <b>deep ink or navy brand plane</b> with a <b>warm metallic accent</b>. The closest match to our own reference — a premium Korean clinic's global site — uses <b><code>#1A1F2E</code> ink + <code>#C9A962</code> gold</b> on <b><code>#EDE8E0</code> cream</b>. That is structurally the same as our current teal design with the hue moved: the layout, the warm paper ground and the single-action-colour rule all survive. <b>Ink &amp; Gold</b> reproduces that structure most closely; <b>Navy &amp; Brass</b> is the same idea pushed further into blue, which reads more institutional and less premium.</p>
+    <p>The competing lead-generation directory we are modelling uses <b><code>#E21D48</code> / <code>#D91C45</code> crimson</b> with a <b><code>#FF4500</code> orange</b> action colour on near-white grey. It is loud and converts on volume rather than on trust. <b>Crimson &amp; Gold</b> keeps that family but pulls the saturation down so it reads as editorial rather than as a sale banner.</p>
+    <p><b>Recommendation: Ink &amp; Gold.</b> It matches the strongest convention in this category, it keeps the warm paper ground that makes the site feel like a directory rather than a sales page, and the gold accent gives the price-led content — our differentiator — a place to live. Navy &amp; Brass is the safe second choice if you want the trust signal to read as data infrastructure rather than as luxury. The aubergine option is the most distinctive but the least expected, which is a risk if the goal is to look established on first sight.</p>
+  </div>
+
+  <h2 class="sec">Benchmark — sampled sites</h2>
+  <p class="sub">Hex values read out of each site's own stylesheet or inline styles on 22 Oct 2026. Two brand tones are listed where a site uses both a primary and a secondary; the ground column lists the page background and the card surface.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:21%">Site</th>
+        <th style="width:11%">Brand</th>
+        <th style="width:22%">Other brand tone</th>
+        <th style="width:21%">Action colour</th>
+        <th style="width:17%">Ground</th>
+        <th style="width:8%">Read from</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="site">relieveclinicseoul.com<small>Premium Korean clinic, global site</small></span></td>
+        <td><span class="sw"><i style="background:#1A1F2E"></i><code>#1A1F2E</code></span></td>
+        <td><span class="sw"><i style="background:#2D3447"></i><code>#2D3447</code></span></td>
+        <td><span class="sw"><i style="background:#C9A962"></i><code>#C9A962</code></span> <span class="sw"><i style="background:#E0C88A"></i><code>#E0C88A</code></span></td>
+        <td><span class="sw"><i style="background:#EDE8E0"></i><code>#EDE8E0</code></span> <span class="sw"><i style="background:#FAF8F5"></i><code>#FAF8F5</code></span></td>
+        <td class="pmeta">inline styles</td>
+      </tr>
+      <tr>
+        <td><span class="site">bestskincareinkorea.com<small>Category reference — lead-gen directory</small></span></td>
+        <td><span class="sw"><i style="background:#E21D48"></i><code>#E21D48</code></span></td>
+        <td><span class="sw"><i style="background:#D91C45"></i><code>#D91C45</code></span> <span class="sw"><i style="background:#B51739"></i><code>#B51739</code></span></td>
+        <td><span class="sw"><i style="background:#FF4500"></i><code>#FF4500</code></span></td>
+        <td><span class="sw"><i style="background:#F9FAFB"></i><code>#F9FAFB</code></span> <span class="sw"><i style="background:#F3F5F7"></i><code>#F3F5F7</code></span></td>
+        <td class="pmeta">site CSS</td>
+      </tr>
+      <tr>
+        <td><span class="site">treatment.com<small>International treatment marketplace</small></span></td>
+        <td><span class="sw"><i style="background:#03A989"></i><code>#03A989</code></span></td>
+        <td></td>
+        <td><span class="sw"><i style="background:#EC7A4B"></i><code>#EC7A4B</code></span> <span class="sw"><i style="background:#FF6900"></i><code>#FF6900</code></span></td>
+        <td><span class="sw"><i style="background:#3F444B"></i><code>#3F444B</code></span> <span class="sw"><i style="background:#69727D"></i><code>#69727D</code></span></td>
+        <td class="pmeta">site CSS</td>
+      </tr>
+      <tr>
+        <td><span class="site">medicaltravelkorea.com<small>Korean medical-tourism portal</small></span></td>
+        <td><span class="sw"><i style="background:#393939"></i><code>#393939</code></span></td>
+        <td></td>
+        <td><span class="muted" style="font-size:12.5px">no separate action colour</span></td>
+        <td><span class="sw"><i style="background:#F5F6F8"></i><code>#F5F6F8</code></span> <span class="sw"><i style="background:#F6F6F6"></i><code>#F6F6F6</code></span></td>
+        <td class="pmeta">inline styles</td>
+      </tr>
+      <tr>
+        <td><span class="site">healthline.com<small>Health editorial, high reach</small></span></td>
+        <td><span class="sw"><i style="background:#231F20"></i><code>#231F20</code></span></td>
+        <td><span class="sw"><i style="background:#02838D"></i><code>#02838D</code></span></td>
+        <td><span class="sw"><i style="background:#AF7F2C"></i><code>#AF7F2C</code></span></td>
+        <td><span class="sw"><i style="background:#FFFFFF"></i><code>#FFFFFF</code></span> <span class="sw"><i style="background:#EEF5F6"></i><code>#EEF5F6</code></span></td>
+        <td class="pmeta">inline styles</td>
+      </tr>
+      <tr>
+        <td><span class="site">medicalnewstoday.com<small>Health editorial</small></span></td>
+        <td><span class="sw"><i style="background:#231F20"></i><code>#231F20</code></span></td>
+        <td><span class="sw"><i style="background:#3D5191"></i><code>#3D5191</code></span></td>
+        <td><span class="sw"><i style="background:#F0533A"></i><code>#F0533A</code></span></td>
+        <td><span class="sw"><i style="background:#DCDBDB"></i><code>#DCDBDB</code></span> <span class="sw"><i style="background:#FFFFFF"></i><code>#FFFFFF</code></span></td>
+        <td class="pmeta">inline styles</td>
+      </tr>
+      <tr>
+        <td><span class="site">clevelandclinic.org<small>US hospital system</small></span></td>
+        <td><span class="sw"><i style="background:#007BC2"></i><code>#007BC2</code></span></td>
+        <td></td>
+        <td><span class="sw"><i style="background:#BD2426"></i><code>#BD2426</code></span></td>
+        <td><span class="sw"><i style="background:#FFFFFF"></i><code>#FFFFFF</code></span> <span class="sw"><i style="background:#EBEBEB"></i><code>#EBEBEB</code></span></td>
+        <td class="pmeta">inline styles</td>
+      </tr>
+      <tr>
+        <td><span class="site">plasticsurgery.org<small>Professional body</small></span></td>
+        <td><span class="sw"><i style="background:#018BAF"></i><code>#018BAF</code></span></td>
+        <td><span class="sw"><i style="background:#024A63"></i><code>#024A63</code></span></td>
+        <td><span class="sw"><i style="background:#E79748"></i><code>#E79748</code></span></td>
+        <td><span class="sw"><i style="background:#F1F7F9"></i><code>#F1F7F9</code></span> <span class="sw"><i style="background:#FFFFFF"></i><code>#FFFFFF</code></span></td>
+        <td class="pmeta">site CSS</td>
+      </tr>
+      <tr>
+        <td><span class="site">koreanskinpedia.com<small>Our own K-beauty property</small></span></td>
+        <td><span class="sw"><i style="background:#C8FF3D"></i><code>#C8FF3D</code></span></td>
+        <td></td>
+        <td><span class="sw"><i style="background:#FF4D2E"></i><code>#FF4D2E</code></span></td>
+        <td><span class="sw"><i style="background:#FBFAF7"></i><code>#FBFAF7</code></span></td>
+        <td class="pmeta">site CSS</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="small muted" style="margin-top:12px">Counting only the primary brand colour, two of the nine sites lead with a teal-family hue (treatment.com, plasticsurgery.org). Five of the nine use a dark ink or navy brand plane, and where a metallic accent appears it is gold or bronze in every case.</p>
+
+  <h2 class="sec">Candidates</h2>
+  <p class="sub">Each card previews the home screen in that palette. Open the mockup with the palette switcher to see all six screens in the same colour.</p>
+
+  <div class="cards">
+
+    <div class="pcard" data-theme="ink">
+      <div class="strip"><i style="background:#1A1F2E"></i><i style="background:#0E1119"></i><i style="background:#C9A962"></i><i style="background:#F2EEE6"></i></div>
+      <div class="preview"><img src="screenshots/palettes/ink-preview.png" alt="Ink and Gold home screen"></div>
+      <div class="body">
+        <h4>F · Ink &amp; Gold <span style="font-weight:400;color:var(--muted);font-size:13px">(recommended)</span></h4>
+        <div class="kk">프리미엄 · 신뢰</div>
+        <p>Near-black ink plane with champagne gold, on a warm cream ground. The closest match to the premium-clinic reference we sampled, and the strongest convention in this category: dark brand plane, one warm metallic accent, nothing else competing.</p>
+        <div class="row2"><span>brand #1A1F2E</span><span>deep #0E1119</span><span>accent #C9A962</span></div>
+        <div class="go"><a href="index.html?theme=ink">Open mockup</a><a href="clinics.html?theme=ink">Clinic list</a></div>
+      </div>
+    </div>
+
+    <div class="pcard" data-theme="navy">
+      <div class="strip"><i style="background:#1B3557"></i><i style="background:#0E1D33"></i><i style="background:#A8802F"></i><i style="background:#F4F3EF"></i></div>
+      <div class="preview"><img src="screenshots/palettes/navy-preview.png" alt="Navy and Brass home screen"></div>
+      <div class="body">
+        <h4>B · Navy &amp; Brass</h4>
+        <div class="kk">신뢰 · 데이터 인프라</div>
+        <p>Deep navy brand plane, champagne gold action colour, warm paper ground. The strongest convention in this category and the closest match to the premium-clinic reference.</p>
+        <div class="row2"><span>brand #1B3557</span><span>deep #0E1D33</span><span>accent #A8802F</span></div>
+        <div class="go"><a href="index.html?theme=navy">Open mockup</a><a href="clinics.html?theme=navy">Clinic list</a></div>
+      </div>
+    </div>
+
+    <div class="pcard" data-theme="crimson">
+      <div class="strip"><i style="background:#8E1F32"></i><i style="background:#4E0F1D"></i><i style="background:#B08637"></i><i style="background:#F7F4F1"></i></div>
+      <div class="preview"><img src="screenshots/palettes/crimson-preview.png" alt="Crimson and Gold home screen"></div>
+      <div class="body">
+        <h4>C · Crimson &amp; Gold</h4>
+        <div class="kk">강렬 · 프리미엄</div>
+        <p>Same family as the category reference but pulled back from sale-banner red to a deep editorial crimson. Warmer and more confident, with less institutional feel.</p>
+        <div class="row2"><span>brand #8E1F32</span><span>deep #4E0F1D</span><span>accent #B08637</span></div>
+        <div class="go"><a href="index.html?theme=crimson">Open mockup</a><a href="clinics.html?theme=crimson">Clinic list</a></div>
+      </div>
+    </div>
+
+    <div class="pcard" data-theme="slate">
+      <div class="strip"><i style="background:#2E4A63"></i><i style="background:#182838"></i><i style="background:#D2603F"></i><i style="background:#F4F4F2"></i></div>
+      <div class="preview"><img src="screenshots/palettes/slate-preview.png" alt="Slate and Coral home screen"></div>
+      <div class="body">
+        <h4>D · Slate &amp; Coral</h4>
+        <div class="kk">현대적 · 차분</div>
+        <p>Cool slate blue with a coral action colour. The least "luxury" of the six and the closest to a mainstream wellness brand — readable and calm, but the weakest premium signal.</p>
+        <div class="row2"><span>brand #2E4A63</span><span>deep #182838</span><span>accent #D2603F</span></div>
+        <div class="go"><a href="index.html?theme=slate">Open mockup</a><a href="clinics.html?theme=slate">Clinic list</a></div>
+      </div>
+    </div>
+
+    <div class="pcard" data-theme="aubergine">
+      <div class="strip"><i style="background:#4A2F52"></i><i style="background:#26162A"></i><i style="background:#C08A3E"></i><i style="background:#F6F3F1"></i></div>
+      <div class="preview"><img src="screenshots/palettes/aubergine-preview.png" alt="Aubergine and Sand home screen"></div>
+      <div class="body">
+        <h4>E · Aubergine &amp; Sand</h4>
+        <div class="kk">편집형 · 럭셔리</div>
+        <p>Deep aubergine with sand gold — the K-beauty editorial register rather than the medical one. The most distinctive of the six, and the least expected by someone arriving from a US clinic site.</p>
+        <div class="row2"><span>brand #4A2F52</span><span>deep #26162A</span><span>accent #C08A3E</span></div>
+        <div class="go"><a href="index.html?theme=aubergine">Open mockup</a><a href="clinics.html?theme=aubergine">Clinic list</a></div>
+      </div>
+    </div>
+
+    <div class="pcard" data-theme="teal">
+      <div class="strip"><i style="background:#0E6B70"></i><i style="background:#073B3E"></i><i style="background:#C2541C"></i><i style="background:#F6F5F1"></i></div>
+      <div class="preview"><img src="screenshots/palettes/teal-preview.png" alt="Teal home screen, current palette"></div>
+      <div class="body">
+        <h4>A · Teal <span style="font-weight:400;color:var(--muted);font-size:13px">(current)</span></h4>
+        <div class="kk">차분 · 현행</div>
+        <p>The current palette, kept for comparison. Calm and legible, but the teal sits in the same register as hospital portals and pharmacy chains — it does not say "premium" or "editorial".</p>
+        <div class="row2"><span>brand #0E6B70</span><span>deep #073B3E</span><span>accent #C2541C</span></div>
+        <div class="go"><a href="index.html?theme=teal">Open mockup</a><a href="clinics.html?theme=teal">Clinic list</a></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

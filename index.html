@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SeoulClinicIndex — Skin &amp; Plastic Clinics in Seoul (Design mockup)</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('sci.palette')||'teal';if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+
+<div class="mock-banner">
+  <span class="pill">DESIGN MOCKUP v1</span>
+  <span>Static screens for review · not the built site · copy and data are illustrative</span>
+</div>
+<div class="mock-nav">
+  <a href="index.html" class="on">01 Home</a>
+  <a href="clinics.html">02 Clinic list</a>
+  <a href="clinic-detail.html">03 Clinic detail (verified)</a>
+  <a href="clinic-detail-minimal.html">04 Clinic detail (minimal, noindex)</a>
+  <a href="neighborhood.html">05 Neighborhood guide</a>
+  <a href="procedure.html">06 Procedure page</a>
+  <a href="palette.html">▤ Palette benchmark</a>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span>Data updated daily from the Korean national clinic registry</span>
+    </div>
+    <div class="tb-right">
+      <span class="tb-pill">EN</span>
+      <a href="#">Help</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <span class="mark"><span>SCI</span></span>
+      <span>SeoulClinicIndex<small>Skin &amp; Plastic Clinics in Seoul</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="clinics.html">Find a clinic</a>
+      <a href="procedure.html">Treatments</a>
+      <a href="neighborhood.html">Neighborhoods</a>
+      <a href="#">Compare</a>
+      <a href="#">Guides</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="#consult">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Clinics are listed gradually — new entries every day</span>
+      <h1>Skin and plastic clinics in <em>Gangnam, Seocho and Songpa</em> — with verified prices</h1>
+      <p class="hero-sub">A working directory built from the national medical facility registry, then checked by hand. Every listed clinic shows its real procedure price, recovery time and languages.</p>
+
+      <div class="searchbox">
+        <div class="sb-field">
+          <label for="q1">Treatment</label>
+          <select id="q1">
+            <option>All treatments</option>
+            <option>Rejuran (skin booster)</option>
+            <option>Ultherapy Prime (lifting)</option>
+            <option>Botox / Coretox</option>
+            <option>Laser toning &amp; pico</option>
+            <option>Fillers</option>
+          </select>
+        </div>
+        <div class="sb-field">
+          <label for="q2">Neighborhood</label>
+          <select id="q2">
+            <option>All areas</option>
+            <option>Cheongdam</option>
+            <option>Apgujeong</option>
+            <option>Sinsa</option>
+            <option>Seocho</option>
+            <option>Yeoksam</option>
+          </select>
+        </div>
+        <button class="btn btn-accent btn-lg sb-go">Search</button>
+      </div>
+      <p class="hero-note">Prices shown are the clinic's own published rates. Final pricing is confirmed at consultation.</p>
+    </div>
+
+    <div class="hero-card">
+      <h3>Directory coverage right now</h3>
+      <p class="hc-sub">Registry data vs. what is live on the site</p>
+      <div class="hc-bars">
+        <div class="hc-bar-row">
+          <div class="hc-bar-top"><b>Registry records</b><span class="num">2,387</span></div>
+          <div class="bar"><i style="width:100%"></i></div>
+        </div>
+        <div class="hc-bar-row">
+          <div class="hc-bar-top"><b>Published and checkable</b><span class="num">127</span></div>
+          <div class="bar alt"><i style="width:5.3%"></i></div>
+        </div>
+        <div class="hc-bar-row">
+          <div class="hc-bar-top"><b>Fully verified (price, hours, lead line)</b><span class="num">20</span></div>
+          <div class="bar"><i style="width:0.84%"></i></div>
+        </div>
+      </div>
+      <p class="hc-foot">We add about <b>20 clinics a day</b> after a manual check. Where a clinic is not yet verified, we never promise a direct line to it.</p>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="v num">2,387</div><div class="k">Registry records across <b>3 districts</b></div></div>
+    <div class="stat"><div class="v num">16</div><div class="k">Neighborhoods with <b>30+ clinics</b></div></div>
+    <div class="stat"><div class="v num">12</div><div class="k">Treatments with <b>price and recovery data</b></div></div>
+    <div class="stat"><div class="v num">20</div><div class="k">Clinics with <b>full manual verification</b></div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Start with a treatment</h2>
+        <p>Each treatment page carries price ranges, downtime and the clinics that actually perform it in that neighborhood.</p>
+      </div>
+      <a class="sec-more" href="procedure.html">All 12 treatments →</a>
+    </div>
+    <div class="grid-4">
+      <a class="card" href="procedure.html">
+        <div class="card-top"><div class="icon-badge">◈</div><span class="tag brand">Skin</span></div>
+        <h4>Rejuran skin booster</h4>
+        <p>Salmon DNA booster. From ₩350,000 per session. Downtime 1–2 days.</p>
+        <div class="card-foot"><span class="price">from ₩350,000<small>per session</small></span><span class="tag">32 clinics</span></div>
+      </a>
+      <a class="card" href="procedure.html">
+        <div class="card-top"><div class="icon-badge">◈</div><span class="tag brand">Skin</span></div>
+        <h4>Ultherapy Prime</h4>
+        <p>Ultrasound lifting, 400 shots. Downtime 2–3 days, result at 3 months.</p>
+        <div class="card-foot"><span class="price">from ₩1,500,000<small>per session</small></span><span class="tag">18 clinics</span></div>
+      </a>
+      <a class="card" href="procedure.html">
+        <div class="card-top"><div class="icon-badge">◈</div><span class="tag warm">Surgery</span></div>
+        <h4>Botox / Coretox</h4>
+        <p>Wrinkle and masseter treatment. No downtime. Units and price vary by area.</p>
+        <div class="card-foot"><span class="price">from ₩180,000<small>per 100u</small></span><span class="tag">27 clinics</span></div>
+      </a>
+      <a class="card" href="procedure.html">
+        <div class="card-top"><div class="icon-badge">◈</div><span class="tag brand">Skin</span></div>
+        <h4>Laser toning &amp; pico</h4>
+        <p>Tone and pigment. Downtime 3–5 days. Sessions usually sold in packages.</p>
+        <div class="card-foot"><span class="price">from ₩200,000<small>per session</small></span><span class="tag">21 clinics</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tight" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Browse by neighborhood</h2>
+        <p>Neighborhood pages list every published clinic with its distance and treatment focus.</p>
+      </div>
+      <a class="sec-more" href="neighborhood.html">All 16 neighborhoods →</a>
+    </div>
+    <div class="grid-4">
+      <a class="card" href="neighborhood.html"><div class="card-top"><h4>Cheongdam</h4><span class="tag">183</span></div><p>Dermatology and plastic surgery cluster along the Teheran corridor.</p></a>
+      <a class="card" href="neighborhood.html"><div class="card-top"><h4>Apgujeong</h4><span class="tag">181</span></div><p>Known for skin clinics with published English pricing.</p></a>
+      <a class="card" href="neighborhood.html"><div class="card-top"><h4>Sinsa</h4><span class="tag">351</span></div><p>Largest concentration in the three districts.</p></a>
+      <a class="card" href="neighborhood.html"><div class="card-top"><h4>Seocho</h4><span class="tag">277</span></div><p>Residential area clinics with evening and Saturday hours.</p></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="row-between" style="align-items:flex-start;gap:40px">
+      <div style="max-width:620px">
+        <h2 class="h2">How this directory works</h2>
+        <p class="lead" style="margin-bottom:22px">We do not buy listings. A clinic appears here because its record came from the government registry and a person checked the details that actually matter for a treatment decision.</p>
+        <div class="stack">
+          <div class="row" style="align-items:flex-start;gap:14px">
+            <div class="icon-badge">1</div>
+            <div><h4 style="font-size:15px;font-weight:650">Registry record</h4><p class="small muted">Name, address, coordinates, treatment scope and opening date come from the national medical facility dataset.</p></div>
+          </div>
+          <div class="row" style="align-items:flex-start;gap:14px">
+            <div class="icon-badge">2</div>
+            <div><h4 style="font-size:15px;font-weight:650">Manual check</h4><p class="small muted">Price list, doctor, opening hours, foreign-language support and a working contact channel are confirmed by a person, on the phone where needed.</p></div>
+          </div>
+          <div class="row" style="align-items:flex-start;gap:14px">
+            <div class="icon-badge">3</div>
+            <div><h4 style="font-size:15px;font-weight:650">Published gradually</h4><p class="small muted">About 20 clinics a day go live after a check. Verified clinics are indexed by search engines; the rest stay out of the index until verified.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="stack" style="flex:1">
+        <div class="notice">
+          <div class="n-ic">i</div>
+          <div>
+            <b>Why the count moves slowly</b>
+            <p>Publishing 2,387 records on day one would give a large list and thin detail. We would rather show a smaller list that is right. Coverage is shown honestly on every page.</p>
+          </div>
+        </div>
+        <div class="notice warm">
+          <div class="n-ic">!</div>
+          <div>
+            <b>Not every listing can take your enquiry</b>
+            <p>Where a clinic has not completed verification, the button says <b>Ask about this area</b> and the request is routed to a verified clinic nearby. We do not pass an enquiry to a clinic we could not reach.</p>
+          </div>
+        </div>
+        <div class="panel" style="margin:0">
+          <h3>What we cannot tell you</h3>
+          <p class="p-sub">Honest limits, stated up front.</p>
+          <ul class="stack-sm" style="font-size:13.5px;color:var(--ink-2);padding-left:18px;line-height:1.7">
+            <li>Patient reviews and before/after photos are not included in this version.</li>
+            <li>Booking and payment are not handled here — this site only introduces you.</li>
+            <li>English-speaking status is confirmed by phone call, not by the presence of an English menu.</li>
+            <li>Final price is always confirmed at consultation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex</span></div>
+        <p>A directory of skin and plastic clinics in Gangnam, Seocho and Songpa, built from the national medical facility registry and checked by hand.</p>
+      </div>
+      <div><h6>Find a clinic</h6><a href="clinics.html">All clinics</a><a href="#">Gangnam</a><a href="#">Seocho</a><a href="#">Songpa</a></div>
+      <div><h6>Treatments</h6><a href="procedure.html">Rejuran</a><a href="#">Ultherapy</a><a href="#">Botox</a><a href="#">Laser toning</a></div>
+      <div><h6>About</h6><a href="#">How we verify</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+    </div>
+    <div class="f-bottom">
+      <span>Clinic data: Korean national medical facility registry (Ministry of the Interior and Safety), daily refresh.</span>
+      <span>© 2026 SeoulVenture — design mockup, not a live site</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/palette-switch.js"></script>
+</body>
+</html>

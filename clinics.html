@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All clinics — SeoulClinicIndex (Design mockup)</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('sci.palette')||'teal';if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+
+<div class="mock-banner">
+  <span class="pill">DESIGN MOCKUP v1</span>
+  <span>Static screens for review · not the built site · copy and data are illustrative</span>
+</div>
+<div class="mock-nav">
+  <a href="index.html">01 Home</a>
+  <a href="clinics.html" class="on">02 Clinic list</a>
+  <a href="clinic-detail.html">03 Clinic detail (verified)</a>
+  <a href="clinic-detail-minimal.html">04 Clinic detail (minimal, noindex)</a>
+  <a href="neighborhood.html">05 Neighborhood guide</a>
+  <a href="procedure.html">06 Procedure page</a>
+  <a href="palette.html">▤ Palette benchmark</a>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left"><span>Data updated daily from the Korean national clinic registry</span></div>
+    <div class="tb-right"><span class="tb-pill">EN</span><a href="#">Help</a><a href="#">Contact</a></div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex<small>Skin &amp; Plastic Clinics in Seoul</small></span></a>
+    <nav class="nav-links">
+      <a href="clinics.html">Find a clinic</a>
+      <a href="procedure.html">Treatments</a>
+      <a href="neighborhood.html">Neighborhoods</a>
+      <a href="#">Compare</a><a href="#">Guides</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="#">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="crumb"><a href="index.html">Home</a> / <span>Clinics</span></nav>
+</div>
+
+<section class="tight" style="padding-top:20px">
+  <div class="wrap">
+    <div class="notice" style="margin-bottom:22px">
+      <div class="n-ic">i</div>
+      <div style="flex:1">
+        <b>127 of 2,387 clinics are published</b>
+        <p>The registry holds 2,387 records across Gangnam, Seocho and Songpa. We publish about 20 a day after a manual check, so this list grows through the day rather than all at once. <span class="num">127</span> published today · next batch in about 6 hours.</p>
+        <div class="n-track"><i style="width:5.3%"></i></div>
+      </div>
+    </div>
+
+    <div class="list-layout">
+      <aside class="filters">
+        <div class="fbox">
+          <h5>District</h5>
+          <div class="fgroup">
+            <label class="chk"><input type="checkbox" checked> Gangnam <span class="c-n">1,525</span></label>
+            <label class="chk"><input type="checkbox"> Seocho <span class="c-n">570</span></label>
+            <label class="chk"><input type="checkbox"> Songpa <span class="c-n">292</span></label>
+          </div>
+          <h5 style="margin-top:20px">Neighborhood</h5>
+          <div class="fgroup">
+            <select class="fsel">
+              <option>All neighborhoods</option>
+              <option>Sinsa</option><option>Yeoksam</option><option>Nonhyeon</option>
+              <option>Cheongdam</option><option>Apgujeong</option><option>Seocho</option>
+            </select>
+          </div>
+          <h5 style="margin-top:20px">Treatment</h5>
+          <div class="fgroup">
+            <select class="fsel">
+              <option>All treatments</option>
+              <option>Rejuran</option><option>Ultherapy Prime</option>
+              <option>Botox / Coretox</option><option>Laser toning</option><option>Filler</option>
+            </select>
+          </div>
+          <h5 style="margin-top:20px">Department</h5>
+          <div class="fgroup">
+            <label class="chk"><input type="checkbox" checked> Dermatology <span class="c-n">1,965</span></label>
+            <label class="chk"><input type="checkbox"> Plastic surgery <span class="c-n">1,340</span></label>
+          </div>
+          <h5 style="margin-top:20px">Verification</h5>
+          <div class="fgroup">
+            <label class="chk"><input type="checkbox" checked> Fully verified <span class="c-n">20</span></label>
+            <label class="chk"><input type="checkbox" checked> Listed, check pending <span class="c-n">107</span></label>
+          </div>
+          <h5 style="margin-top:20px">Sort</h5>
+          <div class="fgroup">
+            <select class="fsel">
+              <option>Recommended</option>
+              <option>Price: low to high</option>
+              <option>Most treatments listed</option>
+              <option>Recently published</option>
+            </select>
+          </div>
+          <button class="btn btn-ghost btn-block btn-sm" style="margin-top:16px">Reset filters</button>
+        </div>
+      </aside>
+
+      <main>
+        <div class="mapbox">
+          <div class="map-head">
+            <b>Map view</b>
+            <span class="small muted">Cluster pins update with the filters above</span>
+          </div>
+          <div class="map-canvas">
+            <svg viewBox="0 0 900 280" width="100%" height="280" preserveAspectRatio="none" style="position:absolute;inset:0">
+              <rect width="900" height="280" fill="var(--map-bg)"/>
+              <g stroke="var(--map-grid)" stroke-width="1" fill="none">
+                <path d="M0 210 L900 168"/><path d="M0 96 L900 122"/>
+                <path d="M180 0 L246 280"/><path d="M520 0 L470 280"/><path d="M760 0 L700 280"/>
+              </g>
+              <path d="M0 210 L900 168" stroke="var(--map-road)" stroke-width="7" fill="none"/>
+              <g fill="var(--map-fill)">
+                <rect x="60" y="40" width="200" height="120" rx="10"/>
+                <rect x="300" y="20" width="260" height="150" rx="10"/>
+                <rect x="600" y="60" width="220" height="130" rx="10"/>
+              </g>
+              <text x="120" y="105" font-size="13" fill="var(--map-label)" font-family="sans-serif">SEOCHO</text>
+              <text x="360" y="100" font-size="13" fill="var(--map-label)" font-family="sans-serif">GANGNAM</text>
+              <text x="660" y="130" font-size="13" fill="var(--map-label)" font-family="sans-serif">SONGPA</text>
+              <g>
+                <circle cx="420" cy="96" r="7" fill="var(--brand)" opacity=".9"/><circle cx="420" cy="96" r="14" fill="var(--brand)" opacity=".16"/>
+                <circle cx="386" cy="130" r="5" fill="var(--brand)" opacity=".7"/>
+                <circle cx="470" cy="140" r="5" fill="var(--brand)" opacity=".7"/>
+                <circle cx="300" cy="72" r="5" fill="var(--accent)" opacity=".85"/>
+                <circle cx="512" cy="66" r="5" fill="var(--accent)" opacity=".85"/>
+                <circle cx="700" cy="120" r="5" fill="var(--brand)" opacity=".7"/>
+              </g>
+            </svg>
+            <div class="map-legend">
+              <span><i style="background:var(--brand)"></i> Verified clinic</span>
+              <span><i style="background:var(--accent)"></i> New today</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-toolbar">
+          <div class="lt-l">
+            <h1>Clinics in Gangnam, Seocho and Songpa</h1>
+            <span class="small muted num">127 published</span>
+          </div>
+          <div class="lt-r">
+            <div class="seg"><span class="on">List</span><span>Map</span></div>
+            <span>Sort: Recommended</span>
+          </div>
+        </div>
+
+        <div class="pill-list" style="margin-bottom:18px">
+          <span class="pill on">All</span>
+          <span class="pill">Cheongdam</span>
+          <span class="pill">Apgujeong</span>
+          <span class="pill">Sinsa</span>
+          <span class="pill">Yeoksam</span>
+          <span class="pill">Nonhyeon</span>
+          <span class="pill">Seocho</span>
+          <span class="pill">Apgujeong-ro</span>
+        </div>
+
+        <article class="clinic-row">
+          <div class="cr-main">
+            <h3>Cheongdam Dermatology Clinic <span class="tag solid">Verified</span></h3>
+            <p class="cr-addr">Cheongdam-dong, Gangnam-gu · 4F, 88 Teheran-ro</p>
+            <div class="cr-meta">
+              <span class="tag brand">Dermatology</span>
+              <span class="tag">Rejuran</span><span class="tag">Laser toning</span>
+              <span class="tag">Filler</span><span class="tag">English OK</span>
+            </div>
+            <div class="cr-foot">
+              <span>Doctor: <b>Dr. Han Seoyeon</b></span>
+              <span>Hours: <b>10:00–19:00 (closed Sun)</b></span>
+              <span>Rejuran <b>from ₩350,000</b></span>
+            </div>
+          </div>
+          <div class="cr-right">
+            <div class="cr-price num">from ₩350,000<small>per session</small></div>
+            <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+            <a class="small" href="clinic-detail.html" style="color:var(--brand);font-weight:600">View profile</a>
+          </div>
+        </article>
+
+        <article class="clinic-row cr-row-new">
+          <div class="cr-main">
+            <h3>Apgujeong Skin &amp; Laser Center <span class="tag warm">Published today</span></h3>
+            <p class="cr-addr">Apgujeong-ro, Gangnam-gu · 11F, 45 Dosan-daero</p>
+            <div class="cr-meta">
+              <span class="tag brand">Dermatology</span>
+              <span class="tag">Rejuran HB Plus</span><span class="tag">Pico laser</span>
+              <span class="tag">English OK</span>
+            </div>
+            <div class="cr-foot">
+              <span>Doctor: <b>Dr. Lee Joonhyuk</b></span>
+              <span>Hours: <b>09:30–18:30</b></span>
+              <span>Price: <b>confirmed at consultation</b></span>
+            </div>
+          </div>
+          <div class="cr-right">
+            <div class="cr-price">Price on request<small>call for current rates</small></div>
+            <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+            <a class="small" href="clinic-detail.html" style="color:var(--brand);font-weight:600">View profile</a>
+          </div>
+        </article>
+
+        <article class="clinic-row">
+          <div class="cr-main">
+            <h3>Nonhyeon Plastic Surgery <span class="tag solid">Verified</span></h3>
+            <p class="cr-addr">Nonhyeon-dong, Gangnam-gu · 9F, 130 Dosan-daero</p>
+            <div class="cr-meta">
+              <span class="tag warm">Plastic surgery</span>
+              <span class="tag">Ultherapy Prime</span><span class="tag">Body contouring</span>
+              <span class="tag">English OK</span><span class="tag">WhatsApp</span>
+            </div>
+            <div class="cr-foot">
+              <span>Doctor: <b>Dr. Park Sungmin</b></span>
+              <span>Hours: <b>11:00–20:00</b></span>
+              <span>Ultherapy <b>from ₩1,500,000</b></span>
+            </div>
+          </div>
+          <div class="cr-right">
+            <div class="cr-price num">from ₩1,500,000<small>per session</small></div>
+            <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+            <a class="small" href="clinic-detail.html" style="color:var(--brand);font-weight:600">View profile</a>
+          </div>
+        </article>
+
+        <article class="clinic-row">
+          <div class="cr-main">
+            <h3>Seocho Skin Clinic <span class="tag solid">Verified</span></h3>
+            <p class="cr-addr">Seocho-dong, Seocho-gu · 3F, 22 Uhm-ro</p>
+            <div class="cr-meta">
+              <span class="tag brand">Dermatology</span>
+              <span class="tag">Botox</span><span class="tag">Skin booster</span>
+              <span class="tag">English OK</span>
+            </div>
+            <div class="cr-foot">
+              <span>Doctor: <b>Dr. Choi Minji</b></span>
+              <span>Hours: <b>10:00–19:00</b></span>
+              <span>Botox <b>from ₩180,000</b></span>
+            </div>
+          </div>
+          <div class="cr-right">
+            <div class="cr-price num">from ₩180,000<small>per 100u</small></div>
+            <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+            <a class="small" href="clinic-detail.html" style="color:var(--brand);font-weight:600">View profile</a>
+          </div>
+        </article>
+
+        <article class="clinic-row">
+          <div class="cr-main">
+            <h3>Jamsil Dermatology <span class="tag">Check pending</span></h3>
+            <p class="cr-addr">Jamsil-dong, Songpa-gu · 2F, 300 Olympic-ro</p>
+            <div class="cr-meta">
+              <span class="tag brand">Dermatology</span>
+              <span class="tag">Laser</span>
+            </div>
+            <div class="cr-foot">
+              <span>Doctor: <b>listed in registry</b></span>
+              <span>Hours: <b>check pending</b></span>
+              <span>Price: <b>check pending</b></span>
+            </div>
+          </div>
+          <div class="cr-right">
+            <div class="cr-price">Details pending<small>verification in progress</small></div>
+            <a class="btn btn-ghost btn-sm" href="clinic-detail-minimal.html">Ask about this area</a>
+            <a class="small" href="clinic-detail-minimal.html" style="color:var(--brand);font-weight:600">View profile</a>
+          </div>
+        </article>
+
+        <div class="row-between" style="margin-top:24px">
+          <span class="small muted">Showing 5 of 127 published clinics · more added daily</span>
+          <div class="seg"><span>←</span><span class="on">1</span><span>2</span><span>3</span><span>…</span><span>26</span><span>→</span></div>
+        </div>
+
+        <div class="panel" style="margin-top:26px">
+          <div class="row-between" style="align-items:flex-start;gap:30px">
+            <div style="max-width:520px">
+              <h3>Cannot find the clinic you want?</h3>
+              <p class="p-sub" style="margin-bottom:14px">Tell us the clinic name, the treatment and the neighborhood. We will look it up in the registry and confirm the details by phone, then add it to the list.</p>
+              <a class="btn btn-primary" href="#">Request a clinic</a>
+            </div>
+            <div style="flex:1;min-width:280px">
+              <div class="notice warm" style="background:var(--warm-bg);border-color:var(--warm-line)">
+                <div class="n-ic" style="background:var(--accent)">!</div>
+                <div>
+                  <b>Listing rule</b>
+                  <p>A clinic is published only after a person confirms it exists, is open, and can be reached. Payment for placement is not accepted.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex</span></div>
+        <p>A directory of skin and plastic clinics in Gangnam, Seocho and Songpa, built from the national medical facility registry and checked by hand.</p>
+      </div>
+      <div><h6>Find a clinic</h6><a href="clinics.html">All clinics</a><a href="#">Gangnam</a><a href="#">Seocho</a><a href="#">Songpa</a></div>
+      <div><h6>Treatments</h6><a href="procedure.html">Rejuran</a><a href="#">Ultherapy</a><a href="#">Botox</a><a href="#">Laser toning</a></div>
+      <div><h6>About</h6><a href="#">How we verify</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+    </div>
+    <div class="f-bottom">
+      <span>Clinic data: Korean national medical facility registry (Ministry of the Interior and Safety), daily refresh.</span>
+      <span>© 2026 SeoulVenture — design mockup, not a live site</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/palette-switch.js"></script>
+</body>
+</html>

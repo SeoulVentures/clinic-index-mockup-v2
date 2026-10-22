@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheongdam Dermatology Clinic — SeoulClinicIndex (Design mockup)</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('sci.palette')||'teal';if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+
+<div class="mock-banner">
+  <span class="pill">DESIGN MOCKUP v1</span>
+  <span>Static screens for review · not the built site · copy and data are illustrative</span>
+</div>
+<div class="mock-nav">
+  <a href="index.html">01 Home</a>
+  <a href="clinics.html">02 Clinic list</a>
+  <a href="clinic-detail.html" class="on">03 Clinic detail (verified)</a>
+  <a href="clinic-detail-minimal.html">04 Clinic detail (minimal, noindex)</a>
+  <a href="neighborhood.html">05 Neighborhood guide</a>
+  <a href="procedure.html">06 Procedure page</a>
+  <a href="palette.html">▤ Palette benchmark</a>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left"><span>Data updated daily from the Korean national clinic registry</span></div>
+    <div class="tb-right"><span class="tb-pill">EN</span><a href="#">Help</a><a href="#">Contact</a></div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex<small>Skin &amp; Plastic Clinics in Seoul</small></span></a>
+    <nav class="nav-links">
+      <a href="clinics.html">Find a clinic</a>
+      <a href="procedure.html">Treatments</a>
+      <a href="neighborhood.html">Neighborhoods</a>
+      <a href="#">Compare</a><a href="#">Guides</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="#consult">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="crumb">
+    <a href="index.html">Home</a> / <a href="clinics.html">Clinics</a> / <a href="neighborhood.html">Cheongdam</a> / <span>Cheongdam Dermatology Clinic</span>
+  </nav>
+</div>
+
+<section class="tight" style="padding-top:18px">
+  <div class="wrap">
+    <div class="detail-grid">
+      <main>
+        <div class="d-head">
+          <div class="d-badges" style="margin-bottom:12px">
+            <span class="tag solid">Verified — checked by phone</span>
+            <span class="tag brand">Dermatology</span>
+            <span class="tag">English OK</span>
+            <span class="tag">Kakao / WhatsApp</span>
+          </div>
+          <h1>Cheongdam Dermatology Clinic</h1>
+          <p class="d-addr">4F, 88 Teheran-ro, Cheongdam-dong, Gangnam-gu, Seoul · <a href="#" style="color:var(--brand);font-weight:600">View on map</a></p>
+          <div class="row" style="gap:10px;flex-wrap:wrap">
+            <span class="tag">Rejuran</span><span class="tag">Rejuran HB Plus</span>
+            <span class="tag">Laser toning</span><span class="tag">Pico laser</span>
+            <span class="tag">Filler</span><span class="tag">Botox</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Practice information</h3>
+          <p class="p-sub">Confirmed with the clinic by telephone on 18 October 2026.</p>
+          <div class="info-grid">
+            <div class="info-row"><div class="il">Lead doctor</div><div class="iv">Dr. Han Seoyeon · Dermatologist</div></div>
+            <div class="info-row"><div class="il">Languages</div><div class="iv">Korean, English (consultation confirmed)</div></div>
+            <div class="info-row"><div class="il">Opening hours</div><div class="iv">Mon–Fri 10:00–19:00 · Sat 10:00–15:00 · Closed Sun</div></div>
+            <div class="info-row"><div class="il">Telephone</div><div class="iv">02-0000-0000</div></div>
+            <div class="info-row"><div class="il">Address</div><div class="iv">4F, 88 Teheran-ro, Cheongdam-dong, Gangnam-gu</div></div>
+            <div class="info-row"><div class="il">Registered</div><div class="iv">Dermatology, opened 2014</div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Treatment and price</h3>
+          <p class="p-sub">The clinic's own published rates, taken from its price list. Prices shown before VAT; the final figure is confirmed at consultation.</p>
+          <table class="proc-table">
+            <thead><tr><th>Treatment</th><th>Downtime</th><th class="r">Price</th></tr></thead>
+            <tbody>
+              <tr><td><div class="pname">Rejuran skin booster</div><div class="pmeta">Healer 2cc + water-glow 1cc + skin botox 1cc</div></td><td class="pmeta">1–2 days</td><td class="pprice num">₩350,000</td></tr>
+              <tr><td><div class="pname">Rejuran HB Plus</div><div class="pmeta">2cc</div></td><td class="pmeta">1–2 days</td><td class="pprice num">₩420,000</td></tr>
+              <tr><td><div class="pname">Laser toning</div><div class="pmeta">Per session, 5-session package quoted separately</div></td><td class="pmeta">3–5 days</td><td class="pprice num">₩200,000</td></tr>
+              <tr><td><div class="pname">Pico laser — tattoo and pigment</div><div class="pmeta">Per session</div></td><td class="pmeta">3–7 days</td><td class="pprice num">₩250,000</td></tr>
+              <tr><td><div class="pname">Botox (Coretox)</div><div class="pmeta">Wrinkle area, per 100u</div></td><td class="pmeta">None</td><td class="pprice num">₩180,000</td></tr>
+              <tr><td><div class="pname">Filler — Radiesse</div><div class="pmeta">Per 1cc</div></td><td class="pmeta">1–2 days</td><td class="pprice num">₩330,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h3>What to expect</h3>
+          <p class="p-sub">The recovery path that the clinic gives for each procedure.</p>
+          <div class="recovery-grid">
+            <div class="rec-card"><div class="rc-v num">30 min</div><div class="rc-k">Consultation</div></div>
+            <div class="rec-card"><div class="rc-v num">1–2 days</div><div class="rc-k">Swelling after booster</div></div>
+            <div class="rec-card"><div class="rc-v num">7 days</div><div class="rc-k">Return flight window</div></div>
+            <div class="rec-card"><div class="rc-v num">2–4 weeks</div><div class="rc-k">Visible change</div></div>
+          </div>
+          <div class="timeline" style="margin-top:22px">
+            <div class="tl-item"><div class="tl-t">Day 0 — Consultation</div><div class="tl-d">English consultation with Dr. Han. Skin assessment and a written estimate. No treatment on the same day unless decided.</div></div>
+            <div class="tl-item"><div class="tl-t">Day 1 — Treatment</div><div class="tl-d">The procedure itself takes 20–40 minutes. Local anaesthetic for filler and laser.</div></div>
+            <div class="tl-item"><div class="tl-t">Day 2–3 — Recovery</div><div class="tl-d">Mild swelling and redness. The clinic asks for a photo check on day 2 by message.</div></div>
+            <div class="tl-item"><div class="tl-t">Day 7 — Departure</div><div class="tl-d">For booster and laser the clinic advises departing on day 7 or later so swelling has settled.</div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Practical notes for visiting patients</h3>
+          <p class="p-sub">Things we confirmed on the call, which are not on the price list.</p>
+          <ul class="stack-sm" style="font-size:14px;color:var(--ink-2);padding-left:20px;line-height:1.75">
+            <li>Deposits for laser packages are paid at the clinic; card and cash are both accepted.</li>
+            <li>The closest station is Exit 4 of Gangnam Station, roughly 6 minutes on foot.</li>
+            <li>For a companion, the clinic can issue a separate visitor pass for each guest.</li>
+            <li>Recovery photos are sent over the messaging channel the clinic uses for consultations.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Common questions</h3>
+          <p class="p-sub">Asked by visiting patients most often.</p>
+          <div class="faq">
+            <div class="faq-item"><div class="q">Can I be treated on the day I arrive?<i>+</i></div><div class="a">Yes for booster and Botox, but the clinic recommends a separate consultation day for laser and filler so swelling is not an issue before a flight.</div></div>
+            <div class="faq-item"><div class="q">Is the price the same for everyone?<i>+</i></div><div class="a">The price list is the base rate. Cost per unit for Botox and the amount of filler depend on the area and are decided after the consultation.</div></div>
+            <div class="faq-item"><div class="q">Do you accept foreign cards?<i>+</i></div><div class="a">International cards are accepted at the clinic. A 10% promotion on packages was valid in September 2026 and may have changed since.</div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Where this clinic sits</h3>
+          <p class="p-sub">Cheongdam holds 183 skin and plastic clinics in the registry. 14 of them are published on this site at the time of writing, 5 of them fully verified.</p>
+          <div class="row" style="gap:10px;flex-wrap:wrap">
+            <a class="btn btn-ghost btn-sm" href="neighborhood.html">Cheongdam guide</a>
+            <a class="btn btn-ghost btn-sm" href="procedure.html">Rejuran in Cheongdam</a>
+            <a class="btn btn-ghost btn-sm" href="clinics.html">All Cheongdam clinics</a>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="leadbox" id="consult">
+          <h3>Enquire about this clinic</h3>
+          <p class="lb-sub">Your message goes to the clinic directly. We confirm receipt within one business day.</p>
+          <div class="field">
+            <label>Full name <span class="req">*</span></label>
+            <input type="text" placeholder="Jane Cooper">
+          </div>
+          <div class="field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" placeholder="jane@example.com">
+          </div>
+          <div class="field">
+            <label>Phone (WhatsApp) <span class="req">*</span></label>
+            <input type="tel" placeholder="+1 202 555 0142">
+            <div class="hint">Include the country code so we can reach you.</div>
+          </div>
+          <div class="field-2">
+            <div class="field"><label>Country <span class="req">*</span></label><select><option>United States</option><option>France</option><option>Singapore</option><option>Australia</option></select></div>
+            <div class="field"><label>Preferred contact</label><select><option>WhatsApp</option><option>Kakao</option><option>Email</option></select></div>
+          </div>
+          <div class="field">
+            <label>Treatment <span class="req">*</span></label>
+            <select>
+              <option>Rejuran skin booster</option>
+              <option>Rejuran HB Plus</option>
+              <option>Laser toning</option>
+              <option>Pico laser</option>
+              <option>Botox (Coretox)</option>
+              <option>Filler — Radiesse</option>
+              <option>Not sure / I need advice</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Message <span class="req">*</span></label>
+            <textarea placeholder="What you are hoping to treat, and when you plan to visit."></textarea>
+          </div>
+          <div class="field-2">
+            <div class="field"><label>Planned arrival</label><input type="date"></div>
+            <div class="field"><label>Planned departure</label><input type="date"></div>
+          </div>
+          <button class="btn btn-accent btn-block btn-lg">Send enquiry</button>
+          <p class="lb-foot">Your details are passed to the clinic to answer you. They are not sold or shared beyond this enquiry. See the <a href="#">privacy notice</a>.</p>
+          <div class="lb-alt">
+            <span>Prefer to talk now?</span>
+            <a class="btn btn-ghost btn-sm" href="#">WhatsApp</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex</span></div>
+        <p>A directory of skin and plastic clinics in Gangnam, Seocho and Songpa, built from the national medical facility registry and checked by hand.</p>
+      </div>
+      <div><h6>Find a clinic</h6><a href="clinics.html">All clinics</a><a href="#">Gangnam</a><a href="#">Seocho</a><a href="#">Songpa</a></div>
+      <div><h6>Treatments</h6><a href="procedure.html">Rejuran</a><a href="#">Ultherapy</a><a href="#">Botox</a><a href="#">Laser toning</a></div>
+      <div><h6>About</h6><a href="#">How we verify</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+    </div>
+    <div class="f-bottom">
+      <span>Clinic data: Korean national medical facility registry (Ministry of the Interior and Safety), daily refresh.</span>
+      <span>© 2026 SeoulVenture — design mockup, not a live site</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/palette-switch.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheongdam clinics — SeoulClinicIndex (Design mockup)</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('sci.palette')||'teal';if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+
+<div class="mock-banner">
+  <span class="pill">DESIGN MOCKUP v1</span>
+  <span>Static screens for review · not the built site · copy and data are illustrative</span>
+</div>
+<div class="mock-nav">
+  <a href="index.html">01 Home</a>
+  <a href="clinics.html">02 Clinic list</a>
+  <a href="clinic-detail.html">03 Clinic detail (verified)</a>
+  <a href="clinic-detail-minimal.html">04 Clinic detail (minimal, noindex)</a>
+  <a href="neighborhood.html" class="on">05 Neighborhood guide</a>
+  <a href="procedure.html">06 Procedure page</a>
+  <a href="palette.html">▤ Palette benchmark</a>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left"><span>Data updated daily from the Korean national clinic registry</span></div>
+    <div class="tb-right"><span class="tb-pill">EN</span><a href="#">Help</a><a href="#">Contact</a></div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex<small>Skin &amp; Plastic Clinics in Seoul</small></span></a>
+    <nav class="nav-links">
+      <a href="clinics.html">Find a clinic</a>
+      <a href="procedure.html">Treatments</a>
+      <a href="neighborhood.html">Neighborhoods</a>
+      <a href="#">Compare</a><a href="#">Guides</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="#consult">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="nb-hero">
+  <div class="wrap">
+    <nav class="crumb" style="padding-top:0"><a href="index.html">Home</a> / <a href="clinics.html">Clinics</a> / <span>Cheongdam</span></nav>
+    <h1 style="margin-top:18px">Cheongdam skin and plastic clinics</h1>
+    <p class="nb-sub">Cheongdam runs along the Teheran business corridor in Gangnam. Clinics sit stacked on a single strip of road, which is why so many of them publish a price list and why finding the right floor takes some care.</p>
+    <div class="nb-facts">
+      <div class="nb-fact"><div class="nf-v num">183</div><div class="nf-k">Clinics in the registry</div></div>
+      <div class="nb-fact"><div class="nf-v num">14</div><div class="nf-k">Published so far</div></div>
+      <div class="nb-fact"><div class="nf-v num">5</div><div class="nf-k">Fully verified</div></div>
+      <div class="nb-fact"><div class="nf-v num">2</div><div class="nf-k">Plastic surgery clinics verified</div></div>
+      <div class="nb-fact"><div class="nf-v num">6 min</div><div class="nf-k">From Gangnam Station, Exit 4</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="tight" style="padding-top:34px">
+  <div class="wrap">
+    <div class="notice" style="margin-bottom:24px">
+      <div class="n-ic">i</div>
+      <div style="flex:1">
+        <b>14 of 183 Cheongdam clinics are published</b>
+        <p>Cheongdam holds 183 clinics in the registry — the fifth largest of the sixteen neighborhoods we cover, and the densest along a single street. At the current rate of 20 clinics a day it takes about nine more days to publish the rest.</p>
+        <div class="n-track"><i style="width:7.6%"></i></div>
+      </div>
+    </div>
+
+    <div class="row-between" style="margin-bottom:20px;align-items:flex-end">
+      <div>
+        <h2 class="h2">Cheongdam clinics</h2>
+        <p class="muted small">Prices are the clinic's own published rates.</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="clinics.html">Open full list with filters</a>
+    </div>
+
+    <div class="grid-2">
+      <article class="card" style="padding:0;overflow:hidden">
+        <div style="padding:20px 20px 0">
+          <div class="card-top">
+            <h4 style="font-size:17px">Cheongdam Dermatology Clinic</h4>
+            <span class="tag solid">Verified</span>
+          </div>
+          <p class="small muted" style="margin-bottom:12px">4F, 88 Teheran-ro · Dermatology · Dr. Han Seoyeon</p>
+          <div class="tag-row" style="margin-bottom:14px">
+            <span class="tag brand">Rejuran</span><span class="tag">Laser toning</span><span class="tag">Filler</span><span class="tag">English OK</span>
+          </div>
+        </div>
+        <div class="card-foot" style="margin:0;padding:14px 20px;background:var(--field-bg)">
+          <span class="price">from ₩350,000<small>Rejuran, per session</small></span>
+          <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+        </div>
+      </article>
+
+      <article class="card" style="padding:0;overflow:hidden">
+        <div style="padding:20px 20px 0">
+          <div class="card-top">
+            <h4 style="font-size:17px">Cheongdam Plastic Surgery</h4>
+            <span class="tag solid">Verified</span>
+          </div>
+          <p class="small muted" style="margin-bottom:12px">12F, 55 Teheran-ro · Plastic surgery · Dr. Kim Donghyun</p>
+          <div class="tag-row" style="margin-bottom:14px">
+            <span class="tag warm">Ultherapy</span><span class="tag">Body contouring</span><span class="tag">English OK</span><span class="tag">WhatsApp</span>
+          </div>
+        </div>
+        <div class="card-foot" style="margin:0;padding:14px 20px;background:var(--field-bg)">
+          <span class="price">from ₩1,500,000<small>Ultherapy Prime, 400 shots</small></span>
+          <a class="btn btn-accent btn-sm" href="clinic-detail.html">Enquire</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="sec-head" style="margin-top:44px">
+      <div>
+        <h2 class="h2">Prices in Cheongdam</h2>
+        <p>What clinics in this neighborhood publish. Ranges cover the prices we have confirmed on the phone.</p>
+      </div>
+    </div>
+
+    <div class="price-bar">
+      <div class="pb-head">
+        <h3>Verified price ranges · Cheongdam</h3>
+        <span class="small muted">5 clinics · updated 18 Oct 2026</span>
+      </div>
+      <div class="stack">
+        <div>
+          <div class="price-range"><span class="pr-end num">₩180,000</span><span class="pr-line"></span><span class="pr-end num">₩320,000</span></div>
+          <div class="pr-scale"><span>Botox (Coretox), per 100u</span><span>Wrinkle area</span></div>
+        </div>
+        <div>
+          <div class="price-range"><span class="pr-end num">₩330,000</span><span class="pr-line"></span><span class="pr-end num">₩420,000</span></div>
+          <div class="pr-scale"><span>Filler, per 1cc</span><span>Radiesse / similar</span></div>
+        </div>
+        <div>
+          <div class="price-range"><span class="pr-end num">₩350,000</span><span class="pr-line"></span><span class="pr-end num">₩600,000</span></div>
+          <div class="pr-scale"><span>Rejuran skin booster</span><span>Per session</span></div>
+        </div>
+        <div>
+          <div class="price-range"><span class="pr-end num">₩1,500,000</span><span class="pr-line"></span><span class="pr-end num">₩2,400,000</span></div>
+          <div class="pr-scale"><span>Ultherapy Prime</span><span>400 shots</span></div>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:6px">Prices are before VAT and may be sold in packages at a different effective rate. The final figure is confirmed at consultation.</p>
+    </div>
+
+    <div class="sec-head" style="margin-top:44px">
+      <div>
+        <h2 class="h2">Cheongdam for a first visit</h2>
+        <p>Practical notes from clinics we have checked in this neighborhood.</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-badge">◷</div>
+        <h4 style="margin-top:12px">Most clinics close on Sunday</h4>
+        <p>Saturday hours are shorter, often ending at 15:00. Plan a consultation on a weekday and the treatment on the following day.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">↔</div>
+        <h4 style="margin-top:12px">Cheongdam Station, Exit 1</h4>
+        <p>Teheran-ro is a ten-minute walk from Cheongdam Station. Several clinics are inside buildings with a shared reception, so check the floor before you go up.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge">◐</div>
+        <h4 style="margin-top:12px">English is not always on the website</h4>
+        <p>A few clinics have an English menu but no English service. We confirm by phone. If a clinic is marked "English OK" here, a person heard it confirmed.</p>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:40px">
+      <div class="row-between" style="align-items:flex-start;gap:36px">
+        <div style="max-width:560px">
+          <h3>Ask about Cheongdam clinics</h3>
+          <p class="p-sub" style="margin-bottom:16px">Tell us the treatment and the date you can come. We will match you with a verified clinic in Cheongdam and pass your message on.</p>
+          <div class="row" style="gap:10px;flex-wrap:wrap">
+            <a class="btn btn-accent" href="#consult">Send an enquiry</a>
+            <a class="btn btn-ghost" href="procedure.html">See treatment pages</a>
+          </div>
+        </div>
+        <div style="flex:1;min-width:300px">
+          <div class="panel" style="margin:0;background:var(--field-bg);box-shadow:none">
+            <h3 style="font-size:15px">Nearby neighborhoods</h3>
+            <div class="pill-list" style="margin-top:12px">
+              <a class="pill" href="neighborhood.html">Apgujeong · 181</a>
+              <a class="pill" href="neighborhood.html">Sinsa · 351</a>
+              <a class="pill" href="neighborhood.html">Nonhyeon · 302</a>
+              <a class="pill" href="neighborhood.html">Yeoksam · 310</a>
+              <a class="pill" href="neighborhood.html">Seocho · 277</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo"><span class="mark"><span>SCI</span></span><span>SeoulClinicIndex</span></div>
+        <p>A directory of skin and plastic clinics in Gangnam, Seocho and Songpa, built from the national medical facility registry and checked by hand.</p>
+      </div>
+      <div><h6>Find a clinic</h6><a href="clinics.html">All clinics</a><a href="#">Gangnam</a><a href="#">Seocho</a><a href="#">Songpa</a></div>
+      <div><h6>Treatments</h6><a href="procedure.html">Rejuran</a><a href="#">Ultherapy</a><a href="#">Botox</a><a href="#">Laser toning</a></div>
+      <div><h6>About</h6><a href="#">How we verify</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+    </div>
+    <div class="f-bottom">
+      <span>Clinic data: Korean national medical facility registry (Ministry of the Interior and Safety), daily refresh.</span>
+      <span>© 2026 SeoulVenture — design mockup, not a live site</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/palette-switch.js"></script>
+</body>
+</html>
